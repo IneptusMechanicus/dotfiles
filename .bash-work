@@ -4,9 +4,9 @@ alias ignite-vpn="systemctl start openvpn-client@igerginov"
 alias cp-gateway-to-dash='cp ~/.ignitevision/gateway/files/dashboard/outgoing/tsys/* ~/.ignitevision/dashboard/files/gateway/incoming/tsys/'
 
 ignite-tmux() {
-	tmux new-session -d -s 'dashboard' -c '/home/ineptus/.ignitevision/dashboard/app/'
-	tmux new-window -t 'dashboard' -c '/home/ineptus/.ignitevision/dashboard/app/'
-	tmux new-session -d -s 'gateway' -c '/home/ineptus/.ignitevision/gateway/app/'
-	tmux new-window -t 'gateway' -c '/home/ineptus/.ignitevision/gateway/app/'
+	tmux new-session -d -s 'dashboard' -c '/home/ineptus/ignitevision/dashboard/app/'
+	tmux new-window -t 'dashboard' -c '/home/ineptus/ignitevision/dashboard/app/'
+	tmux new-session -d -s 'gateway' -c '/home/ineptus/ignitevision/gateway/app/'
+	tmux new-window -t 'gateway' -c '/home/ineptus/ignitevision/gateway/app/'
 	tmux a -t 'dashboard'
 }
