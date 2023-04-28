@@ -8,7 +8,7 @@ tmux_sessionize() {
 	if [[ $# -eq 1 ]]; then
 		selected=$1
 	else
-		selected=$(find ~/ignitevision ~/projects ~/practice ~/nvim-plugins ~/.config -mindepth 1 -maxdepth 2 -type d | fzf)
+		selected=$(find ~/ignitevision ~/projects ~/practice ~/nvim-plugins ~/.config ~/Documents/Personal -mindepth 1 -maxdepth 2 -type d | fzf)
 	fi
 
 	if [[ -z $selected ]]; then
