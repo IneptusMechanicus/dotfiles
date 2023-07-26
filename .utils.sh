@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
 tmux_sessionize() {
@@ -40,6 +40,7 @@ alias l='ls -CF --color=auto'
 alias la='ls -A --color=auto'
 alias ll='ls -alF --color=auto'
 alias ls='ls --color=auto'
+alias woff2-compress='/home/ineptus/ignitevision/woff2/woff2_compress'
 
 
 #Environment Variables
@@ -49,6 +50,8 @@ export VISUAL='nvim'
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+export NVIM_COLORSCHEME_PATH='~/nvim-plugins/mechanicus.nvim'
+export NVIM_DEVNOTES_PATH='~/nvim-plugins/devnotes.nvim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
