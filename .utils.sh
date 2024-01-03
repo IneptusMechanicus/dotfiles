@@ -1,5 +1,20 @@
 #!/usr/bin/env bash
 
+virtualenv_info(){
+	if [[ -n "$VIRTUAL_ENV" ]]; then
+		venv="${VIRTUAL_ENV##*/}"
+	else
+		venv=''
+	fi
+	[[ -n "$venv" ]] && echo "(venv:$venv) "
+}
+
+# disable the default virtualenv prompt change
+
+VENV="\$(virtualenv_info)";
+# the '...' are for irrelevant info here.
+export PS1="... ${VENV} ..."
+
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
@@ -8,7 +23,7 @@ tmux_sessionize() {
 	if [[ $# -eq 1 ]]; then
 		selected=$1
 	else
-		selected=$(find ~/ignitevision ~/projects ~/practice ~/nvim-plugins ~/.config ~/Documents/Personal -mindepth 1 -maxdepth 2 -type d | fzf)
+		selected=$(find ~/ignitevision ~/projects ~/practice ~/nvim-plugins ~/.config ~/Documents/Personal ~/studio/ -mindepth 1 -maxdepth 2 -type d | fzf)
 	fi
 
 	if [[ -z $selected ]]; then
@@ -52,6 +67,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export NVIM_COLORSCHEME_PATH='~/nvim-plugins/mechanicus.nvim'
 export NVIM_DEVNOTES_PATH='~/nvim-plugins/devnotes.nvim'
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
