@@ -17,7 +17,8 @@ tmux_sessionize() {
 	if [[ $# -eq 1 ]]; then
 		selected=$1
 	else
-		selected= eval "find $SESSIONIZE_DIRS -mindepth 1 -maxdepth 1 -type d | fzf"
+		find_cmd="find ${SESSIONIZE_DIRS//\~/${HOME}} -mindepth 1 -maxdepth 1 -type d"
+		selected=$($find_cmd | fzf)
 	fi
 
 	if [[ -z $selected ]]; then
