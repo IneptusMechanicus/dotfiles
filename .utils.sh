@@ -14,10 +14,6 @@ parse_git_branch() {
 }
 
 tmux_sessionize() {
-	if [[ -f "$HOME/.localvars.sh" ]]; then
-		source "$HOME/.localvars.sh"
-	fi
-
 	if [[ $# -eq 1 ]]; then
 		selected=$1
 	else
@@ -44,6 +40,11 @@ tmux_sessionize() {
 
 	tmux switch-client -t $target || tmux attach -t $target
 }
+
+if [[ -f "$HOME/.localvars.sh" ]]; then
+	echo "found"
+	source "$HOME/.localvars.sh"
+fi
 
 #Aliases
 alias grep='grep --color=auto'
