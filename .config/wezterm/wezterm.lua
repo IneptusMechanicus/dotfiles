@@ -9,22 +9,22 @@ config.colors = {
   cursor_border = '#e6c68a',
   cursor_fg = '#21201a',
   ansi = {
-    '#21201a',
+    '#000000',
     '#ff2121',
-    '#75b774',
+    '#529d51',
     '#d6d054',
     '#7abcf5',
     '#ff79c6',
     '#87dfdf',
-    '#cfcfcf'
+    '#e6c68a'
   },
   brights = {
-    '#282a35',
-    '#ff6e67',
-    '#85e084',
-    '#e6ff99',
-    '#61d0ff',
-    '#ff92d0',
+    '#302F27',
+    '#fb6767',
+    '#88c288',
+    '#e6f074',
+    '#90d9ff',
+    '#ffb1d9',
     '#99ffff',
     '#d5e6e6'
   }

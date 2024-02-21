@@ -56,7 +56,7 @@ alias ll='ls -alF --color=auto'
 alias ls='ls --color=auto'
 
 #Environment Variables
-export TERM='tmux-256color'
+export TERM='xterm-256color'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
