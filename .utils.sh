@@ -9,21 +9,19 @@ virtualenv_info(){
 	[[ -n "$venv" ]] && echo "(venv:$venv) "
 }
 
-# disable the default virtualenv prompt change
-
-VENV="\$(virtualenv_info)";
-# the '...' are for irrelevant info here.
-export PS1="... ${VENV} ..."
-
 parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
 tmux_sessionize() {
+	if [[ -f "$HOME/.localvars.sh" ]]; then
+		source "$HOME/.localvars.sh"
+	fi
+
 	if [[ $# -eq 1 ]]; then
 		selected=$1
 	else
-		selected=$(find ~/ignitevision ~/projects ~/practice ~/nvim-plugins ~/.config ~/Documents/Personal ~/studio/ -mindepth 1 -maxdepth 2 -type d | fzf)
+		selected= eval "find $SESSIONIZE_DIRS -mindepth 1 -maxdepth 1 -type d | fzf"
 	fi
 
 	if [[ -z $selected ]]; then
@@ -55,8 +53,6 @@ alias l='ls -CF --color=auto'
 alias la='ls -A --color=auto'
 alias ll='ls -alF --color=auto'
 alias ls='ls --color=auto'
-alias woff2-compress='/home/ineptus/ignitevision/woff2/woff2_compress'
-
 
 #Environment Variables
 export TERM='tmux-256color'
