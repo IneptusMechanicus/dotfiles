@@ -43,7 +43,6 @@ tmux_sessionize() {
 }
 
 if [[ -f "$HOME/.localvars.sh" ]]; then
-	echo "found"
 	source "$HOME/.localvars.sh"
 fi
 
@@ -58,14 +57,15 @@ alias ls='ls --color=auto'
 
 #Environment Variables
 export TERM='xterm-256color'
-export EDITOR='nvim'
-export VISUAL='nvim'
-export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export EDITOR='vim'
+export VISUAL='vim'
+export GREP_COLOR='1;32'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export NVIM_COLORSCHEME_PATH='~/nvim-plugins/mechanicus.nvim'
 export NVIM_DEVNOTES_PATH='~/nvim-plugins/devnotes.nvim'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+export TMUX_PLUGIN_MANAGER_PATH='/home/igerginov/.tmux/plugins/'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
