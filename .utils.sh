@@ -42,10 +42,6 @@ tmux_sessionize() {
 	tmux switch-client -t $target || tmux attach -t $target
 }
 
-if [[ -f "$HOME/.localvars.sh" ]]; then
-	source "$HOME/.localvars.sh"
-fi
-
 #Aliases
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -57,8 +53,8 @@ alias ls='ls --color=auto'
 
 #Environment Variables
 export TERM='xterm-256color'
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export GREP_COLOR='1;32'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -70,3 +66,7 @@ export TMUX_PLUGIN_MANAGER_PATH='/home/igerginov/.tmux/plugins/'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+if [[ -f "$HOME/.localvars.sh" ]]; then
+	source "$HOME/.localvars.sh"
+fi
