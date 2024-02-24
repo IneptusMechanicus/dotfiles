@@ -43,7 +43,6 @@ tmux_sessionize() {
 }
 
 if [[ -f "$HOME/.localvars.sh" ]]; then
-	echo "found"
 	source "$HOME/.localvars.sh"
 fi
 
