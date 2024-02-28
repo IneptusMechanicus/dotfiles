@@ -61,7 +61,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export NVIM_COLORSCHEME_PATH='~/nvim-plugins/mechanicus.nvim'
 export NVIM_DEVNOTES_PATH='~/nvim-plugins/devnotes.nvim'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export TMUX_PLUGIN_MANAGER_PATH='/home/igerginov/.tmux/plugins/'
+export TMUX_PLUGIN_MANAGER_PATH='~/.tmux/plugins/'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
