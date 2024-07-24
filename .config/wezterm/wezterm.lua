@@ -1,5 +1,4 @@
 local wezterm = require('wezterm')
-
 local config = {}
 
 config.colors = {
@@ -33,7 +32,6 @@ config.colors = {
 config.font_size = 16.6
 config.font = wezterm.font('Monaspace Xenon Var', {weight=400, italic = false})
 config.font_rules = {
-  -- == -> => |>
   {
     intensity = 'Bold',
     italic = false,
@@ -50,6 +48,7 @@ config.font_rules = {
     font = wezterm.font('Monaspace Neon Var', {weight=400, italic=false})
   }
 }
+
 config.harfbuzz_features = {
   'calt=1',
   'dlig=1',
@@ -64,12 +63,12 @@ config.harfbuzz_features = {
 }
 
 config.enable_tab_bar = false
+config.window_decorations = "NONE"
 config.window_padding = {
   left = 0,
   right = 0,
   top = 0,
   bottom = 0
 }
-config.window_decorations = "NONE"
 
 return config
