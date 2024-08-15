@@ -18,7 +18,7 @@ tmux_sessionize() {
 		selected=$1
 	else
 		find_cmd="find ${SESSIONIZE_DIRS//\~/${HOME}} -mindepth 1 -maxdepth 1 -type d"
-		selected=$($find_cmd | fzf)
+		selected=$(eval "$find_cmd" | fzf)
 	fi
 
 	if [[ -z $selected ]]; then
@@ -50,6 +50,7 @@ alias l='ls -CF --color=auto'
 alias la='ls -A --color=auto'
 alias ll='ls -alF --color=auto'
 alias ls='ls --color=auto'
+alias pass-gen='</dev/urandom tr -dc '1234567890!@#%+qQwWeErRtTyYuUpPaAsSdDfFgGhHjJkKzZxXcCvVbBnNmM_-' | head -c18; echo '
 
 #Environment Variables
 export TERM='xterm-256color'
