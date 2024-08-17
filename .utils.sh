@@ -53,10 +53,10 @@ alias ls='ls --color=auto'
 alias pass-gen='</dev/urandom tr -dc '1234567890!@#%+qQwWeErRtTyYuUpPaAsSdDfFgGhHjJkKzZxXcCvVbBnNmM_-' | head -c18; echo '
 
 #Environment Variables
-export TERM='xterm-256color'
-export EDITOR='nvim'
-export VISUAL='nvim'
-export GREP_COLOR='1;32'
+export TERM=xterm-256color
+export EDITOR=nvim
+export VISUAL=nvim
+# export GREP_COLOR=1;32
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export NVIM_COLORSCHEME_PATH='~/nvim-plugins/mechanicus.nvim'
