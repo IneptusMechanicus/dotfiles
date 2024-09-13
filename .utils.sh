@@ -50,4 +50,4 @@ if [[ -f "$HOME/.localvars.sh" ]]; then
 	source "$HOME/.localvars.sh"
 fi
 
-envsubst < templates/termux.properties > .termux/colors.properties
+envsubst < ~/templates/termux.properties > ~/.termux/colors.properties

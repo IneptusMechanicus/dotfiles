@@ -10,7 +10,7 @@ source "$HOME/.palette.sh"
 source "$HOME/.utils.sh"
 
 newline=$'\n'
-PROMPT='╭ %B%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$reset_color%}$(virtualenv_info)${newline}╰ > '
+PROMPT='╭ %B%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[yellow]%}$(parse_git_branch) %{$reset_color%}$(virtualenv_info)${newline}╰ > '
 
 zstyle :compinstall filename '/home/ineptus/.zshrc'
 compinit
