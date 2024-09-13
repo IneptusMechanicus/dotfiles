@@ -1,14 +1,15 @@
 local wezterm = require('wezterm')
+local palette = dofile('~/templates/palette.lua')
 local config = {}
 
 config.colors = {
-  foreground = '#e6c68a',
+  foreground = palette.palette.main[7],
   background = '#21201a',
   cursor_bg = '#e6c68a',
   cursor_border = '#e6c68a',
   cursor_fg = '#21201a',
   ansi = {
-    '#000000',
+    '#21201a',
     '#ff2121',
     '#529d51',
     '#d6d054',

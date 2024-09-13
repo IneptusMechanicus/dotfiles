@@ -42,32 +42,12 @@ tmux_sessionize() {
 	tmux switch-client -t $target || tmux attach -t $target
 }
 
-#Aliases
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias l='ls -CF --color=auto'
-alias la='ls -A --color=auto'
-alias ll='ls -alF --color=auto'
-alias ls='ls --color=auto'
-alias pass-gen='</dev/urandom tr -dc '1234567890!@#%+qQwWeErRtTyYuUpPaAsSdDfFgGhHjJkKzZxXcCvVbBnNmM_-' | head -c18; echo '
 
-#Environment Variables
-export TERM=xterm-256color
-export EDITOR=nvim
-export VISUAL=nvim
-# export GREP_COLOR=1;32
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-export NVIM_COLORSCHEME_PATH='~/nvim-plugins/mechanicus.nvim'
-export NVIM_DEVNOTES_PATH='~/nvim-plugins/devnotes.nvim'
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-export TMUX_PLUGIN_MANAGER_PATH='~/.tmux/plugins/'
-
-export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 if [[ -f "$HOME/.localvars.sh" ]]; then
 	source "$HOME/.localvars.sh"
 fi
+
+envsubst < templates/termux.properties > .termux/colors.properties
