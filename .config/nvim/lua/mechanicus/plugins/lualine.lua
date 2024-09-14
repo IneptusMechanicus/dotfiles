@@ -9,22 +9,22 @@ return {
         theme = {
           normal = {
             a = {bg = palette.main[8], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.main[9], fg = palette.main[8]},
+            b = {bg = palette.bright[1], fg = palette.main[8]},
             c = {bg = palette.main[1], fg = palette.main[8]}
           },
           insert = {
-            a = {bg = palette.main[3], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.main[9], fg = palette.main[8]},
+            a = {bg = palette.bright[3], fg = palette.main[1], gui = 'bold'},
+            b = {bg = palette.bright[1], fg = palette.main[8]},
             c = {bg = palette.main[1], fg = palette.main[8]}
           },
           visual = {
             a = {bg = palette.main[4], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.main[9], fg = palette.main[8]},
+            b = {bg = palette.bright[1], fg = palette.main[8]},
             c = {bg = palette.main[1], fg = palette.main[8]}
           },
           command = {
-            a = {bg = palette.main[5], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.main[9], fg = palette.main[8]},
+            a = {bg = palette.bright[5], fg = palette.main[1], gui = 'bold'},
+            b = {bg = palette.bright[1], fg = palette.main[8]},
             c = {bg = palette.main[1], fg = palette.main[8]}
           }
         },

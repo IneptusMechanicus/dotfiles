@@ -19,13 +19,11 @@ vim.api.nvim_create_user_command(
 
 
 vim.api.nvim_create_user_command(
-  'HasLuaModule',
-  function(opts)
-    local module_name = "colors." .. opts.args
-    local success, _ = pcall(require, module_name)
-    print(success);
-  end,
-  { nargs = 1 }
+  'TestStuff',
+  function()
+    print('Nothing in here at the moment')
+  end, 
+  {}
 )
 
 
