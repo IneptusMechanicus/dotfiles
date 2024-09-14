@@ -1,2 +1,4 @@
 .fonts/.uuid
 .termux/shell
+.git-credentials
+lazy-lock.json

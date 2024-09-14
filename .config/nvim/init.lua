@@ -1,0 +1,5 @@
+require('mechanicus.options')
+require('mechanicus.keybindings')
+require('mechanicus.commands')
+require('mechanicus.autocmd')
+require('mechanicus.lazy')
