@@ -1,6 +1,14 @@
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+
+
 setopt PROMPT_SUBST
 setopt ignore_eof
 

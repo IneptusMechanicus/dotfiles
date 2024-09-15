@@ -7,7 +7,7 @@ vim.opt.mouse = 'a'
 vim.opt.wrap = false
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.showmode = true
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 vim.opt.cursorline = true
 vim.opt.colorcolumn = "80"
 -- .2 Search --

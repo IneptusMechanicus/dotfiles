@@ -11,6 +11,6 @@ export COLOR_09=#ff8818
 export COLOR_10=#88c288
 export COLOR_11=#faf974
 export COLOR_12=#8fcfff
-export COLOR_13=#efb9ff
+export COLOR_13=#ffc9ff
 export COLOR_14=#e6e1e1
 export COLOR_15=#ffdfba

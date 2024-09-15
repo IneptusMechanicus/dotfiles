@@ -2,3 +2,4 @@
 .termux/shell
 .git-credentials
 .config/nvim/lazy-lock.json
+tmux-client*
