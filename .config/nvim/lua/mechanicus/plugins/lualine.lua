@@ -2,30 +2,30 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = {'IneptusMechanicus/mechanicus.nvim'},
   config = function()
-    local palette = dofile(os.getenv('HOME')..'/templates/palette.lua').palette
+    local palette = require('mechanicus.colorscheme').palette
     require("lualine").setup({
       options = {
         icons_enabled = true,
         theme = {
           normal = {
-            a = {bg = palette.main[8], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.bright[1], fg = palette.main[8]},
-            c = {bg = palette.main[1], fg = palette.main[8]}
+            a = {bg = palette.ansi7, fg = palette.ansi0, gui = 'bold'},
+            b = {bg = palette.ansi8, fg = palette.ansi7},
+            c = {bg = palette.ansi0, fg = palette.ansi7}
           },
           insert = {
-            a = {bg = palette.bright[3], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.bright[1], fg = palette.main[8]},
-            c = {bg = palette.main[1], fg = palette.main[8]}
+            a = {bg = palette.ansi10, fg = palette.ansi0, gui = 'bold'},
+            b = {bg = palette.ansi8, fg = palette.ansi7},
+            c = {bg = palette.ansi0, fg = palette.ansi7}
           },
           visual = {
-            a = {bg = palette.main[4], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.bright[1], fg = palette.main[8]},
-            c = {bg = palette.main[1], fg = palette.main[8]}
+            a = {bg = palette.ansi3, fg = palette.ansi0, gui = 'bold'},
+            b = {bg = palette.ansi8, fg = palette.ansi7},
+            c = {bg = palette.ansi0, fg = palette.ansi7}
           },
           command = {
-            a = {bg = palette.bright[5], fg = palette.main[1], gui = 'bold'},
-            b = {bg = palette.bright[1], fg = palette.main[8]},
-            c = {bg = palette.main[1], fg = palette.main[8]}
+            a = {bg = palette.ansi12, fg = palette.ansi0, gui = 'bold'},
+            b = {bg = palette.ansi8, fg = palette.ansi7},
+            c = {bg = palette.ansi0, fg = palette.ansi7}
           }
         },
         component_separators = '|',
@@ -34,10 +34,7 @@ return {
       sections = {
         lualine_a = {'mode'},
         lualine_b = {'branch', 'diff'},
-        lualine_c = {{
-          'filename',
-          path = 1
-        }},
+        lualine_c = {{'filename', path = 1}},
         lualine_x = {'encoding', 'fileformat', 'filetype'},
         lualine_y = {'progress'},
         lualine_z = {'location'}

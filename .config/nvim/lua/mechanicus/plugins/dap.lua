@@ -1,23 +1,19 @@
 local vim = vim
-return {
-  {
+return {{
     'jbyuki/one-small-step-for-vimkind',
     'nvim-neotest/nvim-nio'
-  },
-  {
+  }, {
     'rcarriga/nvim-dap-ui',
     config = function()
       require('dapui').setup()
       vim.keymap.set('n', '<leader>dt', require('dapui').toggle)
     end
-  },
-  {
+  }, {
     'mfussenegger/nvim-dap',
     config = function()
       local dap = require('dap')
 
       -- Adapters
-
       dap.adapters.lldb = {
         type = 'executable',
         command = '/usr/bin/lldb-vscode-14', -- adjust as needed, must be absolute path
@@ -41,47 +37,38 @@ return {
       end
 
       -- Configs
+      dap.configurations.rust = {{
+        name = 'Launch',
+        type = 'lldb',
+        request = 'launch',
+        program = function()
+          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        end,
+        cwd = '${workspaceFolder}',
+        stopOnEntry = false,
+        args = {},
+      }}
 
-      dap.configurations.rust = {
-        {
-          name = 'Launch',
-          type = 'lldb',
-          request = 'launch',
-          program = function()
-            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-          end,
-          cwd = '${workspaceFolder}',
-          stopOnEntry = false,
-          args = {},
-        },
-      }
+      dap.configurations.php = {{
+        type = 'php',
+        request = 'launch',
+        name = 'Listen for Xdebug',
+        port = 9090
+      }}
 
-      dap.configurations.php = {
-        {
-          type = 'php',
-          request = 'launch',
-          name = 'Listen for Xdebug',
-          port = 9090
-        }
-      }
+      dap.configurations.gdscript = {{
+        type = "godot",
+        request = "launch",
+        name = "Launch scene",
+        project = "${workspaceFolder}",
+        launch_scene = true,
+      }}
 
-      dap.configurations.gdscript = {
-        {
-          type = "godot",
-          request = "launch",
-          name = "Launch scene",
-          project = "${workspaceFolder}",
-          launch_scene = true,
-        }
-      }
-
-      dap.configurations.lua = {
-        {
-          type = 'nlua',
-          request = 'attach',
-          name = "Attach to running Neovim instance",
-        }
-      }
+      dap.configurations.lua = {{
+        type = 'nlua',
+        request = 'attach',
+        name = "Attach to running Neovim instance",
+      }}
 
       -- Keybindings
 
@@ -92,5 +79,4 @@ return {
       vim.keymap.set('n', '<leader>dv', '<cmd>DapStepOver<cr>', {desc = 'Step Over'})
       vim.keymap.set('n', '<leader>dx', '<cmd>DapTerminate<cr>', {desc = 'Terminate'})
     end
-  },
-}
+}}
