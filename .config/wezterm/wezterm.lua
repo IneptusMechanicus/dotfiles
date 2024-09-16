@@ -1,32 +1,15 @@
 local wezterm = require('wezterm')
+local palette = dofile(os.getenv('HOME')..'/.palette.lua').palette;
 local config = {}
 
 config.colors = {
-  foreground = palette.palette.main[7],
-  background = os.getenv('COLOR_00'),
-  cursor_bg = os.getenv('COLOR_07'),
-  cursor_border = os.getenv('COLOR_07'),
-  cursor_fg = os.getenv('COLOR_00'),
-  ansi = {
-    os.getenv('COLOR_00'),
-    os.getenv('COLOR_01'),
-    os.getenv('COLOR_02'),
-    os.getenv('COLOR_03'),
-    os.getenv('COLOR_04'),
-    os.getenv('COLOR_05'),
-    os.getenv('COLOR_06'),
-    os.getenv('COLOR_07')
-  },
-  brights = {
-    os.getenv('COLOR_08'),
-    os.getenv('COLOR_09'),
-    os.getenv('COLOR_10'),
-    os.getenv('COLOR_11'),
-    os.getenv('COLOR_12'),
-    os.getenv('COLOR_13'),
-    os.getenv('COLOR_14'),
-    os.getenv('COLOR_15')
-  }
+  foreground = palette.main[8],
+  background = palette.main[1],
+  cursor_bg = palette.main[8],
+  cursor_border = palette.main[8],
+  cursor_fg = palette.main[1],
+  ansi = palette.main,
+  brights = palette.bright
 }
 
 config.font_size = 16.6

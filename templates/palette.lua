@@ -2,24 +2,24 @@ local M = {}
 
 M.palette = {
   main = {
-    os.getenv("COLOR_00"),
-    os.getenv("COLOR_01"),
-    os.getenv("COLOR_02"),
-    os.getenv("COLOR_03"),
-    os.getenv("COLOR_04"),
-    os.getenv("COLOR_05"),
-    os.getenv("COLOR_06"),
-    os.getenv("COLOR_07"),
+    '$COLOR_00',
+    '$COLOR_01',
+    '$COLOR_02',
+    '$COLOR_03',
+    '$COLOR_04',
+    '$COLOR_05',
+    '$COLOR_06',
+    '$COLOR_07',
   },
   bright = {
-    os.getenv("COLOR_08"),
-    os.getenv("COLOR_09"),
-    os.getenv("COLOR_10"),
-    os.getenv("COLOR_11"),
-    os.getenv("COLOR_12"),
-    os.getenv("COLOR_13"),
-    os.getenv("COLOR_14"),
-    os.getenv("COLOR_15"),
+    '$COLOR_08',
+    '$COLOR_09',
+    '$COLOR_10',
+    '$COLOR_11',
+    '$COLOR_12',
+    '$COLOR_13',
+    '$COLOR_14',
+    '$COLOR_15',
   }
 }
 

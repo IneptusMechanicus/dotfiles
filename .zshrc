@@ -1,3 +1,7 @@
+source "$HOME/.palette.sh"
+source "$HOME/.aliases.sh"
+source "$HOME/.vars.sh"
+source "$HOME/.utils.sh"
 autoload -U colors && colors
 autoload -Uz compinit && compinit
 
@@ -12,10 +16,6 @@ setopt incappendhistory
 setopt PROMPT_SUBST
 setopt ignore_eof
 
-source "$HOME/.aliases.sh"
-source "$HOME/.vars.sh"
-source "$HOME/.palette.sh"
-source "$HOME/.utils.sh"
 
 newline=$'\n'
 PROMPT='╭ %B%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[yellow]%}$(parse_git_branch) %{$reset_color%}$(virtualenv_info)${newline}╰ > '

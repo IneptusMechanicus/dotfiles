@@ -49,4 +49,5 @@ if [[ -f "$HOME/.localvars.sh" ]]; then
 	source "$HOME/.localvars.sh"
 fi
 
-envsubst < ~/templates/colors.termux > ~/.termux/colors.properties
+envsubst < ~/templates/colors.properties > ~/.termux/colors.properties
+envsubst < ~/templates/palette.lua > ~/.palette.lua
