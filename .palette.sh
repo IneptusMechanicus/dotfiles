@@ -1,5 +1,5 @@
 export COLOR_00=#21201a
-export COLOR_01=#ef6831
+export COLOR_01=#df5831
 export COLOR_02=#529d51
 export COLOR_03=#d6d054
 export COLOR_04=#6aacff
