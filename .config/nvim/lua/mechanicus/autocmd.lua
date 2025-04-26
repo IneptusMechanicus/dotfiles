@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd('Filetype', {
 vim.api.nvim_create_autocmd('Filetype', {
   group = Mechanicus,
   pattern = { 'typescript' },
-  command = 'setlocal expandtab'
+  command = 'setlocal expandtab shiftwidth=2'
 })
 
 vim.api.nvim_create_autocmd('Filetype', {

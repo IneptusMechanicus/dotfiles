@@ -13,7 +13,9 @@ return {
           'bash',
           'markdown',
           'markdown_inline'
-        }
+        },
+        incremental_selection = {enable = true},
+        injections = {enable = true }
       })
     end
   }

@@ -31,17 +31,30 @@ return {
     })
 
     for key, item in pairs(mason_lspconfig.get_installed_servers()) do
-      if item == "rust_analyzer" then
+      if item == 'rust_analyzer' then
         lsp[item].setup({
           capabilities = capabilities,
           settings = {
-            ["rust-analyzer"] = {
+            ['rust-analyzer'] = {
               diagnostics = {
                 enable = true,
                 disabled = {'unresolved-proc-macro'},
                 enableExperimental = true,
               }
             }
+          }
+        })
+      elseif item == 'ts_ls' then
+        local ts_plugin_path = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin'
+        lsp[item].setup({
+          capabilities = capabilities,
+          filetypes = {'vue', 'typescript', 'javascript'},
+        })
+      elseif item == 'volar' then
+        lsp[item].setup({
+          capabilities = capabilities,
+          init_options = {
+            hybtidMode = false
           }
         })
       else
@@ -60,11 +73,11 @@ return {
       },
     })
 
-    local signs = { Error = " ", Warn = " ", Hint = "󰌶 ", Info = " " }
+    local signs = { Error = ' ', Warn = ' ', Hint = '󰌶 ', Info = ' ' }
     for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
+      local hl = 'DiagnosticSign' .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
     end
-    print("done")
+    print('done')
   end
 }
