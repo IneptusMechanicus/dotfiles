@@ -45,10 +45,17 @@ return {
           }
         })
       elseif item == 'ts_ls' then
-        local ts_plugin_path = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server/node_modules/@vue/typescript-plugin'
+        local ts_plugin_path = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
         lsp[item].setup({
           capabilities = capabilities,
           filetypes = {'vue', 'typescript', 'javascript'},
+          plugins = {
+            {
+              name = "@vue/typescript-plugin",
+              location = ts_plugin_path,
+              languages = {"javascript", "typescript", "vue"},
+            }
+          }
         })
       elseif item == 'volar' then
         lsp[item].setup({
