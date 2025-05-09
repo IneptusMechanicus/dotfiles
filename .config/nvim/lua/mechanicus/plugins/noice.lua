@@ -2,7 +2,10 @@ return {
   'folke/noice.nvim',
   dependencies = {
     'MunifTanjim/nui.nvim',
-    'rcarriga/nvim-notify',
+    {
+      'rcarriga/nvim-notify',
+      version = "^3.15.0"
+    },
   },
   config = function()
     require('noice').setup({
@@ -19,6 +22,16 @@ return {
         long_message_to_split = true,
         inc_rename = false,
         lsp_doc_border = false,
+      },
+      messages = {
+        -- NOTE: If you enable messages, then the cmdline is enabled automatically.
+        -- This is a current Neovim limitation.
+        enabled = true, -- enables the Noice messages UI
+        view = "notify", -- default view for messages
+        view_error = "notify", -- view for errors
+        view_warn = "notify", -- view for warnings
+        view_history = "messages", -- view for :messages
+        view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
       },
       views = {
         cmdline_popup = {
@@ -48,16 +61,7 @@ return {
             winhighlight = { Normal = 'Normal', FloatBorder = 'WinBar' },
           },
         },
-      },
-      routes = {
-        {
-          filter = {
-            kind = '',
-            find = 'invalid node type at position 2765',
-          },
-          opts = { skip = true },
-        },
-      },
+      }
     })
   end
 }
