@@ -1,0 +1,72 @@
+* {
+	normal-foreground: #e6c68a;
+	normal-background: #21201a;
+	
+	active-foreground: #ffdfba;
+	active-background: #54463e;
+	
+	urgent-foreground: #ffffff;
+	urgent-background: #e40207;
+
+}
+
+configuration {
+	modes: "drun,run";
+	font: "Monaspace Neon Var 13";
+}
+
+mainbox { 
+	background-color: @normal-background;
+}
+
+listview {
+	lines: 5;
+	columns: 4;
+	scrollbar: true;
+	background-color: @normal-background;
+
+}
+
+scrollbar {
+    width:        4px ;
+    padding:      0;
+    handle-width: 8px ;
+    border:       0;
+    handle-color: @normal-foreground;
+	background-color: @normal-background;
+}
+
+entry, prompt, colon {
+	text-color: @active-foreground;
+	background-color: @normal-background;
+}
+
+
+element {
+	background-color: @normal-background;
+	orientation: vertical;
+	padding: 6px;
+	margin: 6px;
+}
+
+element-text {
+	text-color: @normal-foreground;
+	background-color: @normal-background;
+	horizontal-align: 0.55;
+}
+
+element-icon {
+	background-color: @normal-background;
+	size: 72px;
+}
+
+element.selected.normal {
+	border: 2px solid;
+	border-radius: 25px;
+	border-color: @active-background;
+}
+
+element-text.selected.normal {
+	text-color: @active-foreground;
+	weight: 800;
+}
