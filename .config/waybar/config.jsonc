@@ -1,0 +1,91 @@
+{
+  "mode": "dock",
+  "modules-left": [
+    "keyboard-state",
+    "sway/language",
+    "sway/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "backlight",
+    "battery",
+    "network",
+    "tray"
+  ],
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": {
+        "numlock": "󰎠 {icon}",
+        "capslock": "󰌎 {icon}"
+    },
+    "format-icons": {
+        "locked": "",
+        "unlocked": ""
+    }
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}"
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%B %d | %H:%M:%S}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#88c288'><b>{}</b></span>",
+        "days": "<span color='#e6e1e1'><b>{}</b></span>",
+        "weeks": "<span color='#8fcfff'><b>{:%W}</b></span>",
+        "weekdays": "<span color='#faf974'><b>{}</b></span>",
+        "today": "<span color='#df5821'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "Muted 󰝟",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "device": "amdgpu_bl2",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "󰖚", "󰖨"]
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "max-length": 25,
+    "format": "{ifname}",
+    "format-wifi": "{essid} {icon}",
+    "format-ethernet": "{ipaddr}/{cidr} 󰲝",
+    "format-disconnected": "󰲛",
+    "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
+    "on-click": "~/.config/waybar/scripts/network-menu.sh"
+  }
+}

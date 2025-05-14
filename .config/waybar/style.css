@@ -1,31 +1,42 @@
 #waybar {
-    background-color: rgba(35, 38, 45, 0); /* Dark semi-transparent background */
+    background-color: rgba(0, 0, 0, 0); /* Dark semi-transparent background */
 	font-family: Monaspace Argon Var;
+	font-size: 16px;
 }
 
-#waybar.hidden {
-	opacity: 0;
-}
-
-#workspaces,
 #clock,
-#wireplumber,
 #network,
 #battery,
-#tray,
 #language,
-#backlight
+#backlight,
+#workspaces,
+#wireplumber,
+#keyboard-state
 {
 	background-color: #21201a;
 	color: #e6c68a;
 	padding: 3px;
-	padding-left: 16px;
-	padding-right: 16px;
 	margin-top: 2px;
 	margin-bottom: 6px;
-	margin-left: 8px;
-	margin-right: 8px;
+	margin-left: 4px;
+	margin-right: 4px;
 	border-radius: 10px;
+}
+
+#clock,
+#language,
+#backlight,
+#wireplumber
+{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+#battery,
+#network
+{
+	padding-left: 16px;
+	padding-right: 22px;
 }
 
 #workspaces button {
@@ -45,4 +56,9 @@
 
 #workspaces button.focused {
 	border: 1px solid #88c288;
+}
+
+#keyboard-state label, #keyboard-state label.locked {
+	margin-left: 12px;
+	margin-right: 12px;
 }

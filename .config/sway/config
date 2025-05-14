@@ -11,7 +11,7 @@ set $right l
 set $term wezterm
 
 # Menu (Rofi, Wofi, Dmenu)
-set $menu wofi --show drun
+set $menu rofi -show drun -show-icons -theme "~/.config/rofi/config.rasi"
 
 ### Output configuration
 #
@@ -27,15 +27,17 @@ output * bg ~/Pictures/us+sky_4.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+	timeout 30 'swaylock -fkl' \
+	timeout 40 'swaymsg "output * dpms off"' \
+	resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -fkl'
 
 # Startup execs
 exec --no-startup-id nm-applet
 exec --no-startup-id dbus-update-activation-environment --all
+exec_always mako
 
-bindsym $mod+Escape exec swaylock
+bindsym $mod+Escape exec swaylock -fkl
 
 ### Key bindings
 #
@@ -187,6 +189,7 @@ bar {
 	swaybar_command waybar
 }
 
+bindsym $mod+Tab exec pkill -SIGUSR1 '^waybar$' 
 #
 # Inputs
 #
