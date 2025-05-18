@@ -1,19 +1,19 @@
 profile "Laptop Only" {
-	output "eDP-2" enable position 0,0
+	output "eDP-1" enable position 0,0
 }
 
 profile "Desk Monitors" {
-	output "eDP-2" disable
+	output "eDP-1" disable
 	output "HDMI-A-1" enable position 0,0
 	output "DP-1" enable position 0,1080 transform 180
 }
 
 profile "HMDI" {
-	output "eDP-2" enable position 0,0
+	output "eDP-1" enable position 0,0
 	output "HDMI-A-1" enable position 1920,0
 }
 
 profile "Tablet" {
-	output "eDP-2" enable position 0,0
+	output "eDP-1" enable position 0,0
 	output "DP-1" enable position 1920,0 transform 180
 }

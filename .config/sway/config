@@ -17,7 +17,7 @@ set $menu rofi -show drun -show-icons -theme "~/.config/rofi/config.rasi"
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg ~/Pictures/us+sky_4.png fill
+output * bg ~/wallpaper.png fill
 
 ### Idle configuration
 #
@@ -27,8 +27,8 @@ output * bg ~/Pictures/us+sky_4.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-	timeout 30 'swaylock -fkl' \
-	timeout 40 'swaymsg "output * dpms off"' \
+	timeout 600 'swaylock -fkl' \
+	timeout 900 'swaymsg "output * dpms off"' \
 	resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -fkl'
 
@@ -36,6 +36,7 @@ exec swayidle -w \
 exec --no-startup-id nm-applet
 exec --no-startup-id dbus-update-activation-environment --all
 exec_always mako
+exec_always kanshi
 
 bindsym $mod+Escape exec swaylock -fkl
 
