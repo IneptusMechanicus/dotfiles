@@ -14,7 +14,7 @@
 #keyboard-state
 {
 	background-color: #21201a;
-	color: #e6c68a;
+	color: $COLOR_07;
 	padding: 3px;
 	margin-top: 2px;
 	margin-bottom: 6px;
@@ -40,7 +40,7 @@
 }
 
 #workspaces button {
-	color: #e6c68a;
+	color: $COLOR_07;
 	padding: 3px;
 	border-radius: 8px;
 	box-shadow: none;
@@ -50,12 +50,12 @@
 }
 
 #workspaces button:hover {
-	border: 1px solid #e6c68a;
+	border: 1px solid $COLOR_07;
 	background: #21201a;
 }
 
 #workspaces button.active {
-	border: 1px solid #88c288;
+	border: 1px solid $COLOR_10;
 }
 
 #keyboard-state label, #keyboard-state label.locked {

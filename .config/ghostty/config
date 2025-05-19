@@ -1,4 +1,34 @@
-font-family = Monaspace Xenon Var
-font-size = 13
+font-size = 14
+
+font-family = Monaspace Neon Var
+font-style = Regular
+
+font-family-bold = Monaspace Xenon Var
+font-style-bold = ExtraBold
+
+font-family-italic = Monaspace Radon Var
+font-style-italic = ExtraLight Italic
+
+font-family-bold-italic = Monaspace Xenon Var
+font-style-bold-italic = Bold Italic
+
+
 background = #21201a
 foreground = #e6c68a
+
+palette = 0=#21201a
+palette = 1=#df5831
+palette = 2=#529d51
+palette = 3=#d6d054
+palette = 4=#6aacff
+palette = 5=#cf89cf
+palette = 6=#c1b1b1
+palette = 7=#e6c68a
+palette = 8=#54463e
+palette = 9=#ff8818
+palette = 10=#88c288
+palette = 11=#faf974
+palette = 12=#8fcfff
+palette = 13=#ffc9ff
+palette = 14=#e6e1e1
+palette = 15=#ffdfba

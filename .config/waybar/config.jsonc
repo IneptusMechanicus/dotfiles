@@ -2,8 +2,8 @@
   "mode": "dock",
   "modules-left": [
     "keyboard-state",
-    "sway/language",
-    "sway/workspaces"
+    "hyprland/language",
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "clock"
@@ -27,7 +27,7 @@
         "unlocked": ""
     }
   },
-  "sway/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{name}"

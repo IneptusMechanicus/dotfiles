@@ -1,0 +1,34 @@
+font-size = 14
+
+font-family = Monaspace Neon Var
+font-style = Regular
+
+font-family-bold = Monaspace Xenon Var
+font-style-bold = ExtraBold
+
+font-family-italic = Monaspace Radon Var
+font-style-italic = ExtraLight Italic
+
+font-family-bold-italic = Monaspace Xenon Var
+font-style-bold-italic = Bold Italic
+
+
+background = $COLOR_00
+foreground = $COLOR_07
+
+palette = 0=$COLOR_00
+palette = 1=$COLOR_01
+palette = 2=$COLOR_02
+palette = 3=$COLOR_03
+palette = 4=$COLOR_04
+palette = 5=$COLOR_05
+palette = 6=$COLOR_06
+palette = 7=$COLOR_07
+palette = 8=$COLOR_08
+palette = 9=$COLOR_09
+palette = 10=$COLOR_10
+palette = 11=$COLOR_11
+palette = 12=$COLOR_12
+palette = 13=$COLOR_13
+palette = 14=$COLOR_14
+palette = 15=$COLOR_15

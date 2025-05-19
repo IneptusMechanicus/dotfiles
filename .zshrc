@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 source "$HOME/.palette.sh"
 source "$HOME/.aliases.sh"
 source "$HOME/.vars.sh"

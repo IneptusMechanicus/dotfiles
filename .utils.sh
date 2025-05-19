@@ -51,3 +51,5 @@ fi
 
 envsubst < ~/templates/colors.properties > ~/.termux/colors.properties
 envsubst < ~/templates/palette.lua > ~/.palette.lua
+envsubst < ~/templates/ghostty-config > ~/.config/ghostty/config
+envsubst < ~/templates/waybar-style.css > ~/.config/waybar/style.css
