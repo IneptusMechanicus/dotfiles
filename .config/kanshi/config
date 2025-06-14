@@ -1,6 +1,6 @@
 profile "Laptop Only" {
 	output eDP-1 {
-		mode 1920x1080@120
+		mode 1920x1080@120.21
 		position 0,0
 		scale 1
 	}

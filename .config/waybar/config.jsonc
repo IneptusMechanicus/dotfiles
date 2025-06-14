@@ -1,40 +1,22 @@
 {
-  "mode": "dock",
   "modules-left": [
-    "keyboard-state",
+    "clock",
     "hyprland/language",
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "clock"
+    "tray",
+    "network"
   ],
   "modules-right": [
     "wireplumber",
     "backlight",
     "battery",
-    "network",
-    "tray"
+    "power-profiles-daemon"
   ],
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": {
-        "numlock": "󰎠 {icon}",
-        "capslock": "󰌎 {icon}"
-    },
-    "format-icons": {
-        "locked": "",
-        "unlocked": ""
-    }
-  },
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "format": "{name}"
-  },
   "clock": {
     "interval": 1,
-    "format": "{:%B %d | %H:%M:%S}",
+    "format": " {:%B %d  %H:%M:%S} |",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "month",
@@ -55,8 +37,38 @@
       "on-scroll-down": "shift_down"
     }
   },
+  "hyprland/language": {
+    "format": "|   {} ||",
+    "format-en": "EN",
+    "format-bg": "BG"
+  },
+  "hyprland/workspaces": {
+    "format": "{name}"
+  },
+
+  //---
+
+  "tray": {
+    "spacing": 4,
+    "show-passive-items": true
+  },
+  "network": {
+      "format": " || {ifname}",
+      "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
+      "format-wifi": " ||   {icon}",
+      "format-ethernet": " || 󱂇 ",
+      "format-disconnected": " || 󰲜 ", //An empty format will hide the module.
+      "tooltip-format": "{ifname} via {gwaddr}",
+      "tooltip-format-wifi": "{essid}",
+      "tooltip-format-ethernet": "{ifname} 󱂇",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "ghostty -e nmtui"
+  },
+
+  //---
+
   "wireplumber": {
-    "format": "{volume}% {icon}",
+    "format": " {volume}% {icon} |",
     "format-muted": "Muted 󰝟",
     "format-icons": ["󰕿", "󰖀", "󰕾"],
     "scroll-step": 5,
@@ -64,7 +76,7 @@
   },
   "backlight": {
     "device": "amdgpu_bl2",
-    "format": "{percent}% {icon}",
+    "format": "| {percent}% {icon} |",
     "format-icons": ["", "", "", "󰖚", "󰖨"]
   },
   "battery": {
@@ -73,19 +85,20 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
+    "format": "| {capacity}% {icon}  |",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""]
   },
-  "network": {
-    "max-length": 25,
-    "format": "{ifname}",
-    "format-wifi": "{essid} {icon}",
-    "format-ethernet": "{ipaddr}/{cidr} 󰲝",
-    "format-disconnected": "󰲛",
-    "format-icons": ["󰣾", "󰣴", "󰣶", "󰣸", "󰣺"],
-    "on-click": "~/.config/waybar/scripts/network-menu.sh"
+  "power-profiles-daemon": {
+    "format": "| {icon}  ",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
   }
 }
