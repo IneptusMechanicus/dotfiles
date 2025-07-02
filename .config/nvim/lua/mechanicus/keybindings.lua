@@ -17,8 +17,6 @@ bindings.set('x', '<leader>p', [["_dP]])
 bindings.set('n', '<C-d>', '<C-d>zz')
 bindings.set('n', '<C-u>', '<C-u>zz')
 
--- File Manager --
-
 -- Buffer cycling --
 bindings.set('n', '<S-Right>', '<cmd>bnext<cr>')
 bindings.set('n', '<S-Left>', '<cmd>bprev<cr>')
