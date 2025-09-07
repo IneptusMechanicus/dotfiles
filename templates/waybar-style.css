@@ -3,6 +3,13 @@
 	font-family: Monaspace Xenon Var;
 	font-weight: 600;
 	font-size: 13px;
+	transition:
+		background-color 250ms ease,
+		color 250ms ease,
+		border-color 250ms ease,
+		transform 250ms ease,
+		box-shadow 250ms ease,
+		opacity 250ms ease;
 }
 
 .modules-left,
