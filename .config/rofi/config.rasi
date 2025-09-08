@@ -22,6 +22,10 @@ configuration {
 	font: "Monaspace Neon Var 13";
 }
 
+inputbar {
+	background-color: @normal-background;
+}
+
 mainbox { 
 	background-color: @normal-background;
 }
@@ -42,7 +46,7 @@ scrollbar {
 	background-color: @normal-background;
 }
 
-entry, prompt, colon {
+entry, prompt, colon, case-indicator {
 	text-color: @active-foreground;
 	background-color: @normal-background;
 }
@@ -68,11 +72,19 @@ element-icon {
 
 element.selected.normal {
 	border: 2px solid;
-	border-radius: 25px;
+	border-radius: 12px;
 	border-color: @active-background;
+	background-color: @active-background;
 }
 
 element-text.selected.normal {
+	background-color: @active-background;
+	text-color: @active-foreground;
+	weight: 800;
+}
+
+element-icon.selected.normal {
+	background-color: @active-background;
 	text-color: @active-foreground;
 	weight: 800;
 }
