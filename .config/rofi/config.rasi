@@ -5,8 +5,8 @@
 	active-foreground: #ffdfba;
 	active-background: #54463e;
 	
-	urgent-foreground: #ffffff;
-	urgent-background: #e40207;
+	urgent-foreground: #e6e1e1;
+	urgent-background: #df5831;
 
 }
 
