@@ -1,16 +1,19 @@
-export COLOR_00=#21201a
-export COLOR_01=#df5831
-export COLOR_02=#529d51
-export COLOR_03=#d6d054
-export COLOR_04=#6aacff
-export COLOR_05=#cf89cf
-export COLOR_06=#c1b1b1
-export COLOR_07=#e6c68a
-export COLOR_08=#54463e
-export COLOR_09=#ff8818
-export COLOR_10=#88c288
-export COLOR_11=#faf974
-export COLOR_12=#8fcfff
-export COLOR_13=#ffc9ff
-export COLOR_14=#e6e1e1
-export COLOR_15=#ffdfba
+export COLOR_00=#5B5B5B
+export COLOR_01=#C23900
+export COLOR_02=#82D757
+export COLOR_03=#ECE64E
+export COLOR_04=#305AC8
+export COLOR_05=#8F2BC9
+export COLOR_06=#40B08E
+export COLOR_07=#E68822
+
+export COLOR_08=#C7C7C7
+export COLOR_09=#F89B73
+export COLOR_10=#ACF487
+export COLOR_11=#FFFB9D
+export COLOR_12=#99B4FE
+export COLOR_13=#E4B4FF
+export COLOR_14=#96FFDF
+export COLOR_15=#F6CC9F
+
+export COLOR_16=#152924

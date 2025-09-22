@@ -3,10 +3,10 @@ local palette = dofile(os.getenv('HOME')..'/.palette.lua').palette;
 local config = {}
 
 config.colors = {
-  foreground = palette.main[8],
+  foreground = palette.main[9],
   background = palette.main[1],
-  cursor_bg = palette.main[8],
-  cursor_border = palette.main[8],
+  cursor_bg = palette.main[9],
+  cursor_border = palette.main[9],
   cursor_fg = palette.main[1],
   ansi = palette.main,
   brights = palette.bright

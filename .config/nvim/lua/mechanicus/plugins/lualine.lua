@@ -8,24 +8,24 @@ return {
         icons_enabled = true,
         theme = {
           normal = {
-            a = {bg = palette.ansi7, fg = palette.ansi8, gui = 'bold'},
-            b = {bg = palette.ansi8, fg = palette.ansi7},
-            c = {bg = palette.ansi0, fg = palette.ansi7}
+            a = {bg = palette.ansi1, fg = palette.ansi_bg, gui = 'bold'},
+            b = {bg = palette.ansi2, fg = palette.ansi_bg},
+            c = {bg = palette.ansi_bg, fg = palette.ansi1}
           },
           insert = {
-            a = {bg = palette.ansi10, fg = palette.ansi8, gui = 'bold'},
-            b = {bg = palette.ansi8, fg = palette.ansi7},
-            c = {bg = palette.ansi0, fg = palette.ansi7}
+            a = {bg = palette.ansi10, fg = palette.ansi_bg, gui = 'bold'},
+            b = {bg = palette.ansi2, fg = palette.ansi_bg},
+            c = {bg = palette.ansi_bg, fg = palette.ansi1}
           },
           visual = {
-            a = {bg = palette.ansi3, fg = palette.ansi8, gui = 'bold'},
-            b = {bg = palette.ansi8, fg = palette.ansi7},
-            c = {bg = palette.ansi0, fg = palette.ansi7}
+            a = {bg = palette.ansi3, fg = palette.ansi_bg, gui = 'bold'},
+            b = {bg = palette.ansi2, fg = palette.ansi_bg},
+            c = {bg = palette.ansi_bg, fg = palette.ansi1}
           },
           command = {
-            a = {bg = palette.ansi12, fg = palette.ansi8, gui = 'bold'},
-            b = {bg = palette.ansi8, fg = palette.ansi7},
-            c = {bg = palette.ansi0, fg = palette.ansi7}
+            a = {bg = palette.ansi12, fg = palette.ansi_bg, gui = 'bold'},
+            b = {bg = palette.ansi2, fg = palette.ansi_bg},
+            c = {bg = palette.ansi_bg, fg = palette.ansi1}
           }
         },
         component_separators = '|',

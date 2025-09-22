@@ -1,19 +1,13 @@
 font-size = 16.5
 
-font-family = Monaspace Neon Var
+font-family = Victor Mono
 font-style = Regular
 
-font-family-bold = Monaspace Xenon Var
-font-style-bold = ExtraBold
-
-font-family-italic = Monaspace Radon Var
+font-family-italic = Victor Mono Oblique
 font-style-italic = ExtraLight Italic
 
-font-family-bold-italic = Monaspace Xenon Var
-font-style-bold-italic = Bold Italic
 
-
-background = $COLOR_00
+background = $COLOR_16
 foreground = $COLOR_07
 
 palette = 0=$COLOR_00
@@ -32,3 +26,4 @@ palette = 12=$COLOR_12
 palette = 13=$COLOR_13
 palette = 14=$COLOR_14
 palette = 15=$COLOR_15
+palette = 16=$COLOR_16

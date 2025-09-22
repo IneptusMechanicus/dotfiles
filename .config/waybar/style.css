@@ -1,6 +1,6 @@
 #waybar {
-	background-color: #21201a;
-	font-family: Monaspace Xenon Var;
+	background-color: #152924;
+	font-family: Victor Mono;
 	font-weight: 600;
 	font-size: 13px;
 	transition:
@@ -16,7 +16,7 @@
 .modules-center,
 .modules-right {
 	background-color: rgba(0, 0, 0, 0);
-	color: #e6c68a;
+	color: #82D757;
 	border: 0px;
 }
 
@@ -36,31 +36,58 @@
 	margin-bottom: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	padding-left: 0px;
 	padding-right: 0px;
 }
 
 #workspaces button {
-	color: #e6c68a;
+	color: #82D757;
 	box-shadow: none;
 	text-shadow: none;
 	border-radius: 8px;
 	margin-left: 0px;
 	margin-right: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 2px;
 	padding-right: 1px;
+	transition:
+		background-color 250ms ease,
+		color 250ms ease,
+		border-color 250ms ease,
+		transform 250ms ease,
+		box-shadow 250ms ease,
+		opacity 250ms ease;
 }
 
 #workspaces button:hover {
-	border: 1px solid #e6c68a;
+	border: 1px solid #ECE64E;
+	transition:
+		background-color 250ms ease,
+		color 250ms ease,
+		border-color 250ms ease,
+		transform 250ms ease,
+		box-shadow 250ms ease,
+		opacity 250ms ease;
 }
 
 #workspaces button.active {
-	border: 1px solid #88c288;
+	border: 1px solid #ECE64E;
+	transition:
+		background-color 250ms ease,
+		color 250ms ease,
+		border-color 250ms ease,
+		transform 250ms ease,
+		box-shadow 250ms ease,
+		opacity 250ms ease;
 }
 
+#custom-spacer,
+#custom-spacer-start,
+#custom-spacer-end
+{
+	color: #5B5B5B
+}
 

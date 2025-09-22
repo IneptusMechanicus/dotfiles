@@ -1,34 +1,29 @@
 font-size = 16.5
 
-font-family = Monaspace Neon Var
+font-family = Victor Mono
 font-style = Regular
 
-font-family-bold = Monaspace Xenon Var
-font-style-bold = ExtraBold
-
-font-family-italic = Monaspace Radon Var
+font-family-italic = Victor Mono Oblique
 font-style-italic = ExtraLight Italic
 
-font-family-bold-italic = Monaspace Xenon Var
-font-style-bold-italic = Bold Italic
 
+background = #152924
+foreground = #E68822
 
-background = #21201a
-foreground = #e6c68a
-
-palette = 0=#21201a
-palette = 1=#df5831
-palette = 2=#529d51
-palette = 3=#d6d054
-palette = 4=#6aacff
-palette = 5=#cf89cf
-palette = 6=#c1b1b1
-palette = 7=#e6c68a
-palette = 8=#54463e
-palette = 9=#ff8818
-palette = 10=#88c288
-palette = 11=#faf974
-palette = 12=#8fcfff
-palette = 13=#ffc9ff
-palette = 14=#e6e1e1
-palette = 15=#ffdfba
+palette = 0=#5B5B5B
+palette = 1=#C23900
+palette = 2=#82D757
+palette = 3=#ECE64E
+palette = 4=#305AC8
+palette = 5=#8F2BC9
+palette = 6=#40B08E
+palette = 7=#E68822
+palette = 8=#C7C7C7
+palette = 9=#F89B73
+palette = 10=#ACF487
+palette = 11=#FFFB9D
+palette = 12=#99B4FE
+palette = 13=#E4B4FF
+palette = 14=#96FFDF
+palette = 15=#F6CC9F
+palette = 16=#152924

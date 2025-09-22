@@ -1,5 +1,6 @@
 {
   "modules-left": [
+    "custom/spacer-start",
     "clock",
     "custom/spacer",
     "hyprland/language",
@@ -18,7 +19,8 @@
     "custom/spacer",
     "battery",
     "custom/spacer",
-    "power-profiles-daemon"
+    "power-profiles-daemon",
+    "custom/spacer-end",
   ],
   "clock": {
     "interval": 1,
@@ -111,6 +113,13 @@
     }
   },
   "custom/spacer" : {
-    "format": " | "
+    "format": "  |  "
+  },
+  "custom/spacer-start" : {
+    "format": "|  "
+  },
+  "custom/spacer-end" : {
+    "format": "  |"
   }
+
 }

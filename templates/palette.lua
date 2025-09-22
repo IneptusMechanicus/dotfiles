@@ -2,6 +2,7 @@ local M = {}
 
 M.palette = {
   main = {
+    '$COLOR_16',
     '$COLOR_00',
     '$COLOR_01',
     '$COLOR_02',

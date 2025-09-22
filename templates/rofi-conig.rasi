@@ -1,9 +1,9 @@
 * {
-	normal-foreground: $COLOR_07;
-	normal-background: $COLOR_00;
+	normal-foreground: $COLOR_02;
+	normal-background: $COLOR_16;
 	
-	active-foreground: $COLOR_15;
-	active-background: $COLOR_08;
+	active-foreground: $COLOR_16;
+	active-background: $COLOR_06;
 	
 	urgent-foreground: $COLOR_14;
 	urgent-background: $COLOR_01;

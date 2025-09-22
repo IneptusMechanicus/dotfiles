@@ -19,7 +19,7 @@ setopt ignore_eof
 
 
 newline=$'\n'
-PROMPT='╭ %B%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[yellow]%}$(parse_git_branch) %{$reset_color%}$(virtualenv_info)${newline}╰ > '
+PROMPT='╭ %B%{%F{4}%}%n@%m %{%F{3}%}%~ %{%F{2}%}$(parse_git_branch) %{$reset_color%}$(virtualenv_info)${newline}╰ > '
 
 zstyle :compinstall filename '/home/ineptus/.zshrc'
 compinit

@@ -1,12 +1,12 @@
 * {
-	normal-foreground: #e6c68a;
-	normal-background: #21201a;
+	normal-foreground: #82D757;
+	normal-background: #152924;
 	
-	active-foreground: #ffdfba;
-	active-background: #54463e;
+	active-foreground: #152924;
+	active-background: #40B08E;
 	
-	urgent-foreground: #e6e1e1;
-	urgent-background: #df5831;
+	urgent-foreground: #96FFDF;
+	urgent-background: #C23900;
 
 }
 

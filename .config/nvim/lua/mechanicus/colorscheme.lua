@@ -1,6 +1,7 @@
 local M = {}
 
 M.palette = {
+  ansi_bg     = os.getenv('COLOR_16'),
   ansi0       = os.getenv('COLOR_00'),
   ansi1       = os.getenv('COLOR_01'),
   ansi2       = os.getenv('COLOR_02'),
@@ -25,10 +26,6 @@ M.palette = {
   base5       = '#9ca0a4',
   base6       = '#b1b1b1',
   base7       = '#e3e3e1',
-  diff_add    = '#77a66c',
-  diff_remove = '#ef6831',
-  diff_change = '#27407f',
-  diff_text   = '#d6d054',
 }
 
 M.hi_treesitter = function(palette)
@@ -53,13 +50,13 @@ end
 M.highlight_group = function(palette, treesitter)
   return {
     -- Base --
-    Normal = { fg = palette.ansi7, bg = palette.ansi0 },
+    Normal = { fg = palette.ansi7, bg = palette.ansi_bg },
     NormalFloat = { bg = palette.base1 },
     NonText = { fg = palette.base2 },
     Visual = { bg = palette.base3 },
     VisualNOS = { bg = palette.base2 },
-    Search = { fg = palette.ansi0, bg = palette.ansi3 },
-    IncSearch = { fg = palette.ansi0, bg = palette.ansi9 },
+    Search = { fg = palette.ansi_bg, bg = palette.ansi3 },
+    IncSearch = { fg = palette.ansi_bg, bg = palette.ansi9 },
     MatchParen = { fg = palette.ansi9 },
     Question = { fg = palette.ansi3 },
     ModeMsg = { fg = palette.ansi7, style = 'bold' },
@@ -69,7 +66,7 @@ M.highlight_group = function(palette, treesitter)
     VertSplit = { fg = palette.ansi6 },
     LineNr = { fg = palette.base4, bg = palette.base0 },
     Cursor = { style = 'reverse' },
-    CursorLine = { bg = palette.ansi0 },
+    CursorLine = { bg = palette.ansi_bg },
     CursorLineNr = { fg = palette.base6, bg = palette.base1, style = 'bold' },
     CursorLineSign = { fg = palette.base6, bg = palette.base1 },
     SignColumn = { bg = palette.base0 },
@@ -84,11 +81,11 @@ M.highlight_group = function(palette, treesitter)
     Identifier = { fg = palette.ansi4, style = 'bold' },
 
     -- Git colors --
-    DiffAdd = { bg = palette.diff_add },
-    DiffDelete = { bg = palette.diff_remove },
-    DiffChange = { bg = palette.diff_change },
-    DiffText = { bg = palette.diff_text },
-    diffAdded = { fg = palette.ansi10 },
+    DiffAdd = { bg = palette.ansi4 },
+    DiffDelete = { bg = palette.ansi1 },
+    DiffChange = { bg = palette.ansi_bg },
+    DiffText = { bg = palette.diff_bg },
+    diffAdded = { fg = palette.ansi4 },
     diffRemoved = { fg = palette.ansi1 },
 
     -- Popups --
@@ -149,7 +146,7 @@ M.highlight_group = function(palette, treesitter)
 
     -- WhichKey
     WhichKey = {fg = palette.ansi10, style = 'bold'},
-    WhichKeyFloat = {fg = palette.ansi7, bg = palette.ansi0},
+    WhichKeyFloat = {fg = palette.ansi7, bg = palette.ansi_bg},
     WhichKeyGroup = {fg = palette.ansi9, style = 'italic'},
     WhichKeySeparator = {fg = palette.ansi3, style = 'bold'},
     WhichKeyDesc = {fg = palette.ansi4, style = 'italic'},
