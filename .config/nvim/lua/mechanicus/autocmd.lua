@@ -18,3 +18,12 @@ vim.api.nvim_create_autocmd('Filetype', {
   pattern = {'php'},
   command = 'setlocal autoindent'
 })
+
+vim.api.nvim_create_autocmd(
+  { "BufNewFile", "BufRead" },
+  {
+    pattern = ".env.*",
+    command = "set filetype=sh",
+    group = custom_filetypes_group,
+  }
+)
