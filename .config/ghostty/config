@@ -7,14 +7,14 @@ font-family-italic = Victor Mono Oblique
 font-style-italic = ExtraLight Italic
 
 
-background = #152924
+background = #182421
 foreground = #E68822
 
 palette = 0=#5B5B5B
 palette = 1=#C23900
 palette = 2=#82D757
 palette = 3=#ECE64E
-palette = 4=#305AC8
+palette = 4=#3559B8
 palette = 5=#8F2BC9
 palette = 6=#40B08E
 palette = 7=#E68822
@@ -26,4 +26,4 @@ palette = 12=#99B4FE
 palette = 13=#E4B4FF
 palette = 14=#96FFDF
 palette = 15=#F6CC9F
-palette = 16=#152924
+palette = 16=#182421

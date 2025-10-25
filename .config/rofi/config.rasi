@@ -1,8 +1,8 @@
 * {
 	normal-foreground: #82D757;
-	normal-background: #152924;
+	normal-background: #182421;
 	
-	active-foreground: #152924;
+	active-foreground: #182421;
 	active-background: #40B08E;
 	
 	urgent-foreground: #96FFDF;
