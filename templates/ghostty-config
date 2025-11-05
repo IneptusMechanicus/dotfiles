@@ -5,6 +5,7 @@ font-style = Regular
 
 font-family-italic = Victor Mono Oblique
 font-style-italic = ExtraLight Italic
+font-style-bold-italic = Medium Oblique
 
 
 background = $COLOR_16
