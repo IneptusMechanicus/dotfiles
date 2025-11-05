@@ -45,14 +45,14 @@ return {
           }
         })
       elseif item == 'ts_ls' then
-        local ts_plugin_path = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
+        -- local ts_plugin_path = require('mason-registry').get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
         lsp[item].setup({
           capabilities = capabilities,
           filetypes = {'vue', 'typescript', 'javascript'},
           plugins = {
             {
               name = "@vue/typescript-plugin",
-              location = ts_plugin_path,
+              -- location = ts_plugin_path,
               languages = {"javascript", "typescript", "vue"},
             }
           }
@@ -68,8 +68,6 @@ return {
         lsp[item].setup({capabilities = capabilities})
       end
     end
-
-    mason_lspconfig.setup();
 
     vim.diagnostic.config({
       virtual_text = false,
