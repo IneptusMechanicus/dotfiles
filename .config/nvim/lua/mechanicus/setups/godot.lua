@@ -19,9 +19,9 @@ local is_server_running = vim.uv.fs_stat(godot_project_path .. '/server.pipe')
 if is_godot_project and not is_server_running then
     vim.fn.serverstart(godot_project_path .. '/server.pipe')
     -- LSP Setup
+    local lspconfig = vim.lsp.config
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    lspconfig.gdscript.setup({capabilities = capabilities})
 end
 
-local lspconfig = require('lspconfig')
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-lspconfig.gdscript.setup({capabilities = capabilities})
 

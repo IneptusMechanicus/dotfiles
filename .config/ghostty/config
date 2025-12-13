@@ -1,30 +1,30 @@
-font-size = 16.5
+font-size              = 15.5
 
-font-family = Victor Mono
-font-style = Regular
+font-family            = Victor Mono
+font-style             = Regular
 
-font-family-italic = Victor Mono Oblique
-font-style-italic = ExtraLight Italic
+font-family-italic     = Victor Mono Oblique
+font-style-italic      = ExtraLight Italic
 font-style-bold-italic = Medium Oblique
 
 
 background = #182421
 foreground = #E68822
 
-palette = 0=#5B5B5B
-palette = 1=#C23900
-palette = 2=#82D757
-palette = 3=#ECE64E
-palette = 4=#3559B8
-palette = 5=#8F2BC9
-palette = 6=#40B08E
-palette = 7=#E68822
-palette = 8=#C7C7C7
-palette = 9=#F89B73
-palette = 10=#ACF487
-palette = 11=#FFFB9D
-palette = 12=#99B4FE
-palette = 13=#E4B4FF
-palette = 14=#96FFDF
-palette = 15=#F6CC9F
-palette = 16=#182421
+palette    =  0=#5B5B5B
+palette    =  1=#C23900
+palette    =  2=#82D757
+palette    =  3=#ECE64E
+palette    =  4=#3559B8
+palette    =  5=#8F2BC9
+palette    =  6=#40B08E
+palette    =  7=#E68822
+palette    =  8=#C7C7C7
+palette    =  9=#F89B73
+palette    = 10=#ACF487
+palette    = 11=#FFFB9D
+palette    = 12=#99B4FE
+palette    = 13=#E4B4FF
+palette    = 14=#96FFDF
+palette    = 15=#F6CC9F
+palette    = 16=#182421

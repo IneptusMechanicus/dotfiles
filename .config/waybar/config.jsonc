@@ -1,26 +1,18 @@
 {
   "modules-left": [
-    "custom/spacer-start",
     "clock",
-    "custom/spacer",
     "hyprland/language",
-    "custom/spacer",
     "hyprland/workspaces"
   ],
   "modules-center": [
     "bluetooth",
-    "custom/spacer",
     "network"
   ],
   "modules-right": [
     "wireplumber",
-    "custom/spacer",
     "backlight",
-    "custom/spacer",
     "battery",
-    "custom/spacer",
-    "power-profiles-daemon",
-    "custom/spacer-end",
+    "power-profiles-daemon"
   ],
   "clock": {
     "interval": 1,
@@ -87,7 +79,7 @@
   },
   "backlight": {
     "device": "amdgpu_bl2",
-    "format": "{percent}% {icon} ",
+    "format": "{percent}% {icon}",
     "format-icons": ["", "", "", "󰖚", "󰖨"]
   },
   "battery": {
@@ -102,7 +94,7 @@
     "format-icons": ["", "", "", "", ""]
   },
   "power-profiles-daemon": {
-    "format": "{icon} ",
+    "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
     "tooltip": true,
     "format-icons": {
@@ -111,15 +103,5 @@
       "balanced": "",
       "power-saver": ""
     }
-  },
-  "custom/spacer" : {
-    "format": "  |  "
-  },
-  "custom/spacer-start" : {
-    "format": "|  "
-  },
-  "custom/spacer-end" : {
-    "format": "  |"
   }
-
 }

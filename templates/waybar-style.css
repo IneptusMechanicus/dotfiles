@@ -1,5 +1,5 @@
 #waybar {
-	background-color: $COLOR_16;
+	background-color: rgba(0, 0, 0, 0);
 	font-family: Victor Mono;
 	font-weight: 600;
 	font-size: 13px;
@@ -28,18 +28,27 @@
 #wireplumber,
 #backlight,
 #battery,
+#bluetooth,
 #power-profiles-daemon
 {
+	background-color: $COLOR_16;
 	border: 0px;
 	border-radius: 10px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	padding-left: 0px;
-	padding-right: 0px;
+	margin-top: 6px;
+	margin-bottom: 2px;
+	margin-left: 6px;
+	margin-right: 6px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+#bluetooth,
+#network
+{
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 #workspaces button {

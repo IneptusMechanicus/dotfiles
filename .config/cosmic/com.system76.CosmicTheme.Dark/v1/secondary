@@ -1,0 +1,100 @@
+(
+    base: (
+        red: 0.19541007,
+        green: 0.24550581,
+        blue: 0.23243502,
+        alpha: 1.0,
+    ),
+    component: (
+        base: (
+            red: 0.22603887,
+            green: 0.276954,
+            blue: 0.26356986,
+            alpha: 1.0,
+        ),
+        hover: (
+            red: 0.30341524,
+            green: 0.3492586,
+            blue: 0.33721286,
+            alpha: 1.0,
+        ),
+        pressed: (
+            red: 0.38079166,
+            green: 0.4215632,
+            blue: 0.4108559,
+            alpha: 1.0,
+        ),
+        selected: (
+            red: 0.30341524,
+            green: 0.3492586,
+            blue: 0.33721286,
+            alpha: 1.0,
+        ),
+        selected_text: (
+            red: 0.50980395,
+            green: 0.84313726,
+            blue: 0.3411765,
+            alpha: 1.0,
+        ),
+        focus: (
+            red: 0.50980395,
+            green: 0.84313726,
+            blue: 0.3411765,
+            alpha: 1.0,
+        ),
+        divider: (
+            red: 1.0,
+            green: 0.81542027,
+            blue: 0.66320986,
+            alpha: 0.2,
+        ),
+        on: (
+            red: 1.0,
+            green: 0.81542027,
+            blue: 0.66320986,
+            alpha: 1.0,
+        ),
+        disabled: (
+            red: 0.22603887,
+            green: 0.276954,
+            blue: 0.26356986,
+            alpha: 0.5,
+        ),
+        on_disabled: (
+            red: 1.0,
+            green: 0.81542027,
+            blue: 0.66320986,
+            alpha: 0.65,
+        ),
+        border: (
+            red: 0.5948625,
+            green: 0.75358456,
+            blue: 0.97605175,
+            alpha: 1.0,
+        ),
+        disabled_border: (
+            red: 0.5948625,
+            green: 0.75358456,
+            blue: 0.97605175,
+            alpha: 0.5,
+        ),
+    ),
+    divider: (
+        red: 0.35632807,
+        green: 0.34884936,
+        blue: 0.298306,
+        alpha: 1.0,
+    ),
+    on: (
+        red: 1.0,
+        green: 0.76222354,
+        blue: 0.5617898,
+        alpha: 1.0,
+    ),
+    small_widget: (
+        red: 0.27566254,
+        green: 0.28360096,
+        blue: 0.30674094,
+        alpha: 0.25,
+    ),
+)

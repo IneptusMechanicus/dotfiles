@@ -1,30 +1,30 @@
-font-size = 16.5
+font-size              = 15.5
 
-font-family = Victor Mono
-font-style = Regular
+font-family            = Victor Mono
+font-style             = Regular
 
-font-family-italic = Victor Mono Oblique
-font-style-italic = ExtraLight Italic
+font-family-italic     = Victor Mono Oblique
+font-style-italic      = ExtraLight Italic
 font-style-bold-italic = Medium Oblique
 
 
 background = $COLOR_16
 foreground = $COLOR_07
 
-palette = 0=$COLOR_00
-palette = 1=$COLOR_01
-palette = 2=$COLOR_02
-palette = 3=$COLOR_03
-palette = 4=$COLOR_04
-palette = 5=$COLOR_05
-palette = 6=$COLOR_06
-palette = 7=$COLOR_07
-palette = 8=$COLOR_08
-palette = 9=$COLOR_09
-palette = 10=$COLOR_10
-palette = 11=$COLOR_11
-palette = 12=$COLOR_12
-palette = 13=$COLOR_13
-palette = 14=$COLOR_14
-palette = 15=$COLOR_15
-palette = 16=$COLOR_16
+palette    =  0=$COLOR_00
+palette    =  1=$COLOR_01
+palette    =  2=$COLOR_02
+palette    =  3=$COLOR_03
+palette    =  4=$COLOR_04
+palette    =  5=$COLOR_05
+palette    =  6=$COLOR_06
+palette    =  7=$COLOR_07
+palette    =  8=$COLOR_08
+palette    =  9=$COLOR_09
+palette    = 10=$COLOR_10
+palette    = 11=$COLOR_11
+palette    = 12=$COLOR_12
+palette    = 13=$COLOR_13
+palette    = 14=$COLOR_14
+palette    = 15=$COLOR_15
+palette    = 16=$COLOR_16

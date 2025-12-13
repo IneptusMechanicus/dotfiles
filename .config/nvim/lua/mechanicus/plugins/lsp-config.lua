@@ -1,14 +1,13 @@
 return {
-  'neovim/nvim-lspconfig',
+  'williamboman/mason.nvim',
   dependencies = {
-    'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim'
   },
   config = function()
     require('mason').setup()
 
     local vim = vim
-    local lsp = require('lspconfig')
+    local lsp = vim.lsp.config
     local mason_lspconfig = require('mason-lspconfig')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
