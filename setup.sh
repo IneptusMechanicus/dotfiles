@@ -53,6 +53,9 @@ sudo systemctl start  cups.service
 # Replacing SDDM with regreet
 sudo pacman -Ry sddm
 
+sudo systemctl enable cosmic-greeter.service
+sudo systemctl start  cosmic-greeter.service
+
 # greetd base config
 echo '
 [terminal]
@@ -73,21 +76,24 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 rm ~/.bashrc
 rm -rf ~/.config/hypr/
 stow ~/dotfiles/
+chsh -s /usr/bin/zsh
 
 # Setting up default flatpaks
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install                 \
-	app.zen_browser.zen         \
-	com.github.tchx84.Flatseal  \
-	org.gnome.Snapshot          \
-	org.gnome.font-viewer       \
-	org.libreoffice.LibreOffice \
-	net.lutris.Lutris           \
-	org.blender.Blender         \
-	org.godotengine.Godot       \
-	org.kde.krita               \
-	org.inkscape.Inkscape       \
-	org.ardour.Ardour
+flatpak install             \
+com.github.tchx84.Flatseal  \
+org.gnome.SimpleScan        \
+org.gnome.Snapshot          \
+org.gnome.font-viewer       \
+app.zen_browser.zen         \
+org.libreoffice.LibreOffice \
+com.valvesoftware.Steam     \
+net.lutris.Lutris           \
+org.blender.Blender         \
+org.inkscape.Inkscape       \
+org.kde.krita               \
+org.ardour.Ardour           \
+org.godotengine.Godot       \
 
 # Setting up AUR and AUR packages required in 
 git clone https://aur.archlinux.org/yay.git
@@ -95,4 +101,6 @@ cd yay
 makepkg -si
 yay --version
 cd .. && rm -rf yay
+
+# AUR PAckages
 yay -S hyprdynamicmonitors-bin
