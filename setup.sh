@@ -31,6 +31,7 @@ sudo pacman -Sy     \
 	cosmic-greeter  \
 	cosmic-files    \
 	cosmic-settings \
+	pavucontrol
 
 #Firewall config
 sudo systemctl enable ufw.service
@@ -55,21 +56,6 @@ sudo pacman -Ry sddm
 
 sudo systemctl enable cosmic-greeter.service
 sudo systemctl start  cosmic-greeter.service
-
-# greetd base config
-echo '
-[terminal]
-vt=1
-[default_session]
-command = "hyprland --config /etc/greetd/hyprland.conf"
-user = "greeter"
-' | sudo tee "/etc/greetd/config.toml" > /dev/null
-
-#greetd hyprland config
-
-echo '
-exec-once = regreet; hyprctl dispatch exit
-' | sudo tee "/etc/greetd/hyprland.conf" > /dev/null
 
 # Setting up dotfiles and tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

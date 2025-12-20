@@ -61,7 +61,7 @@
 	padding-top: 1px;
 	padding-bottom: 1px;
 	padding-left: 2px;
-	padding-right: 1px;
+	padding-right: 5px;
 	transition:
 		background-color 250ms ease,
 		color 250ms ease,
@@ -83,11 +83,9 @@
 }
 
 #workspaces button.active {
-	border: 1px solid $COLOR_03;
 	transition:
 		background-color 250ms ease,
 		color 250ms ease,
-		border-color 250ms ease,
 		transform 250ms ease,
 		box-shadow 250ms ease,
 		opacity 250ms ease;

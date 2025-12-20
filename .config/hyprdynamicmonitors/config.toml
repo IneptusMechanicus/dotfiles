@@ -1,0 +1,48 @@
+[general]
+destination = "$HOME/.config/hypr/monitors.conf"
+
+[power_events]
+
+[power_events.dbus_query_object]
+path = "/org/freedesktop/UPower/devices/line_power_ADP0"
+
+[[power_events.dbus_signal_match_rules]]
+object_path = "/org/freedesktop/UPower/devices/line_power_ADP0"
+
+
+[profiles.laptop-ext1]
+config_file = "/home/ineptus/.config/hyprdynamicmonitors/hyprconfigs/laptop-ext1.go.tmpl"
+config_file_type = "template"
+[profiles.laptop-ext1.conditions]
+lid_state = "Opened"
+[[profiles.laptop-ext1.conditions.required_monitors]]
+description = "AU Optronics 0xD1ED"
+monitor_tag = "monitor0"
+
+[[profiles.laptop-ext1.conditions.required_monitors]]
+description = "BNQ BenQ EW2780 B6M0212501Q"
+monitor_tag = "monitor1"
+
+
+[profiles.laptop]
+config_file = "/home/ineptus/.config/hyprdynamicmonitors/hyprconfigs/laptop.go.tmpl"
+config_file_type = "template"
+[profiles.laptop.conditions]
+
+[[profiles.laptop.conditions.required_monitors]]
+description = "AU Optronics 0xD1ED"
+monitor_tag = "monitor0"
+
+
+[profiles.ext1]
+config_file = "/home/ineptus/.config/hyprdynamicmonitors/hyprconfigs/ext1.go.tmpl"
+config_file_type = "template"
+[profiles.ext1.conditions]
+
+[[profiles.ext1.conditions.required_monitors]]
+description = "AU Optronics 0xD1ED"
+monitor_tag = "monitor0"
+
+[[profiles.ext1.conditions.required_monitors]]
+description = "BNQ BenQ EW2780 B6M0212501Q"
+monitor_tag = "monitor1"

@@ -43,7 +43,11 @@
     "format-bg": "BG"
   },
   "hyprland/workspaces": {
-    "format": "{name}"
+    "format": "{icon}",
+    "format-icons": {
+        "active": "",
+        "default": ""
+    }
   },
 
   //---
