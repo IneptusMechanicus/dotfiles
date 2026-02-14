@@ -44,9 +44,16 @@ tmux_sessionize() {
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
 if [[ -f "$HOME/.localvars.sh" ]]; then
 	source "$HOME/.localvars.sh"
 fi
+
+if [[ ! -v PALETTE ]]; then
+	export PALETTE=default.sh
+fi
+
+source "$HOME/.palettes/$PALETTE"
 
 envsubst < ~/templates/colors.properties > ~/.termux/colors.properties
 envsubst < ~/templates/palette.lua > ~/.palette.lua

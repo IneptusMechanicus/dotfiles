@@ -8,23 +8,23 @@ font-style-italic      = ExtraLight Italic
 font-style-bold-italic = Medium Oblique
 
 
-background = #182421
-foreground = #E68822
+background = #121122
+foreground = #C55428
 
-palette    =  0=#5B5B5B
-palette    =  1=#C23900
-palette    =  2=#82D757
-palette    =  3=#ECE64E
-palette    =  4=#3559B8
-palette    =  5=#8F2BC9
-palette    =  6=#40B08E
-palette    =  7=#E68822
-palette    =  8=#C7C7C7
-palette    =  9=#F89B73
-palette    = 10=#ACF487
-palette    = 11=#FFFB9D
-palette    = 12=#99B4FE
-palette    = 13=#E4B4FF
-palette    = 14=#96FFDF
-palette    = 15=#F6CC9F
-palette    = 16=#182421
+palette    =  0=#505050
+palette    =  1=#7B4579
+palette    =  2=#705681
+palette    =  3=#5B5681
+palette    =  4=#3E5A80
+palette    =  5=#7B2F5E
+palette    =  6=#A61B1D
+palette    =  7=#C55428
+palette    =  8=#808080
+palette    =  9=#80BAB4
+palette    = 10=#C0A3D5
+palette    = 11=#C9C7FD
+palette    = 12=#90C5E8
+palette    = 13=#D2FFE6
+palette    = 14=#EBDE95
+palette    = 15=#F3FFE4
+palette    = 16=#121122
