@@ -1,4 +1,4 @@
-export COLOR_00=#21201A
+export COLOR_00=#43412C
 export COLOR_01=#DF5831
 export COLOR_02=#529D51
 export COLOR_03=#D6D054
@@ -6,6 +6,7 @@ export COLOR_04=#6AACFF
 export COLOR_05=#CF89CF
 export COLOR_06=#C1B1B1
 export COLOR_07=#E6C68A
+
 export COLOR_08=#54463E
 export COLOR_09=#FF8818
 export COLOR_10=#88C288
@@ -14,3 +15,5 @@ export COLOR_12=#8FCFFF
 export COLOR_13=#FFC9FF
 export COLOR_14=#E6E1E1
 export COLOR_15=#FFDFBA
+
+export COLOR_16=#21201A

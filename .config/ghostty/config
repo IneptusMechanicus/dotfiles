@@ -9,22 +9,22 @@ font-style-bold-italic = Medium Oblique
 
 
 background = #121122
-foreground = #C55428
+foreground = #EBDE95
 
 palette    =  0=#505050
-palette    =  1=#7B4579
+palette    =  1=#A61B1D
 palette    =  2=#705681
 palette    =  3=#5B5681
 palette    =  4=#3E5A80
-palette    =  5=#7B2F5E
-palette    =  6=#A61B1D
-palette    =  7=#C55428
+palette    =  5=#7B4579
+palette    =  6=#7B2F5E
+palette    =  7=#EBDE95
 palette    =  8=#808080
-palette    =  9=#80BAB4
+palette    =  9=#C55428
 palette    = 10=#C0A3D5
 palette    = 11=#C9C7FD
 palette    = 12=#90C5E8
-palette    = 13=#D2FFE6
-palette    = 14=#EBDE95
+palette    = 13=#80BAB4
+palette    = 14=#D2FFE6
 palette    = 15=#F3FFE4
 palette    = 16=#121122

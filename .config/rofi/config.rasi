@@ -3,10 +3,10 @@
 	normal-background: #121122;
 	
 	active-foreground: #121122;
-	active-background: #A61B1D;
+	active-background: #7B2F5E;
 	
-	urgent-foreground: #EBDE95;
-	urgent-background: #7B4579;
+	urgent-foreground: #D2FFE6;
+	urgent-background: #A61B1D;
 
 }
 

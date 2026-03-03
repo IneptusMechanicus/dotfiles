@@ -6,7 +6,7 @@ return {
   },
   config = function()
     require('mason').setup()
-
+     
     local vim = vim
     local mason_lspconfig = require('mason-lspconfig')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -56,7 +56,10 @@ return {
             capabilities = capabilities,
             filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
             cmd = { "typescript-language-server", "--stdio" },
-            root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" }
+            root_markers = {
+              "tsconfig.json",
+              "jsconfig.json", 
+            }
           }
         elseif server == 'lua_ls' then
           config = {
