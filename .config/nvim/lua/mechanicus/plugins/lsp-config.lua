@@ -96,6 +96,10 @@ return {
             cmd = { "astro-ls", "--stdio" },
             root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" }
           }
+        else
+          config = {
+            capabilities = capabilities,
+          }
         end
         vim.lsp.config(server, config);
         vim.lsp.enable(server)
