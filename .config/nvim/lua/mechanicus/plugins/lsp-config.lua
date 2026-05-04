@@ -6,15 +6,14 @@ return {
   },
   config = function()
     require('mason').setup()
-     
-    local vim = vim
+
+    vim.env.PATH = vim.fn.stdpath("data") .. "/mason/bin:" .. vim.env.PATH
     local mason_lspconfig = require('mason-lspconfig')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
       callback = function(args)
-        print('Should Attach');
         local opts = { buffer = args.buf }
         -- Disable semanticTokensProvider if causing issues (as in your original config)
         if vim.lsp.get_client_by_id(args.data.client_id) then
@@ -36,73 +35,86 @@ return {
     })
 
     for key, server in ipairs(mason_lspconfig.get_installed_servers()) do
-        if server == 'rust_analyzer' then
-          config = {
-            capabilities = capabilities,
-            filetypes = {'rust'},
-            cmd = {'rust_analyzer'},
-            settings = {
-              ['rust-analyzer'] = {
-                diagnostics = {
-                  enable = true,
-                  disabled = { 'unresolved-proc-macro' },
-                  enableExperimental = true,
-                },
+      local config = {
+        capabilities = capabilities
+      }
+      if server == 'rust_analyzer' then
+        config = {
+          capabilities = capabilities,
+          filetypes = {'rust'},
+          cmd = {'rust-analyzer'},
+          settings = {
+            ['rust-analyzer'] = {
+              diagnostics = {
+                enable = true,
+                disabled = { 'unresolved-proc-macro' },
+                enableExperimental = true,
               },
             },
+          },
+        }
+      elseif server == 'ts_ls' then
+        config = {
+          capabilities = capabilities,
+          filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+          cmd = { "typescript-language-server", "--stdio" },
+          root_markers = {
+            "tsconfig.json",
+            "jsconfig.json", 
           }
-        elseif server == 'ts_ls' then
-          config = {
-            capabilities = capabilities,
-            filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-            cmd = { "typescript-language-server", "--stdio" },
-            root_markers = {
-              "tsconfig.json",
-              "jsconfig.json", 
-            }
-          }
-        elseif server == 'lua_ls' then
-          config = {
-             on_init = function(client)
-              if client.workspace_folders then
-                local path = client.workspace_folders[1].name
-                if
-                  path ~= vim.fn.stdpath('config')
-                  and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
-                then
-                  return
-                end
-              end
+        }
+      elseif server == 'lua_ls' then
+        -- 1. Determine the root directory manually to decide on settings
+        local cwd = vim.fn.getcwd()
+        local is_nvim_config = cwd:find('nvim') or cwd:find('.config')
 
-              client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-                runtime = {
-                  version = 'LuaJIT',
-                  path = { 'lua/?.lua', 'lua/?/init.lua' },
-                },
-                workspace = {
-                  checkThirdParty = false,
-                  library = {
-                    vim.env.VIMRUNTIME
-                  }
-                }
-              })
-            end,
-            settings = { Lua = {} }
+        local lua_settings = {
+          Lua = {
+            runtime = { version = 'LuaJIT' },
+            workspace = { checkThirdParty = false },
           }
-        elseif server == 'astro' then
-          config = {
-            capabilities = capabilities,
-            filetypes = { 'astro' },
-            cmd = { "astro-ls", "--stdio" },
-            root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" }
-          }
-        else
-          config = {
-            capabilities = capabilities,
-          }
+        }
+
+        if is_nvim_config then
+          lua_settings.Lua.diagnostics = { globals = { 'vim' } }
+          lua_settings.Lua.workspace.library = { vim.env.VIMRUNTIME }
         end
-        vim.lsp.config(server, config);
-        vim.lsp.enable(server)
+
+        config = {
+          filetypes = { 'lua' },
+          cmd = { vim.fn.stdpath("data") .. "/mason/bin/lua-language-server" },
+          root_markers = { '.luarc.json', '.luarc.jsonc', 'init.lua', '.git' },
+          settings = lua_settings, -- Pass the settings here directly!
+          on_init = function(client)
+            -- We keep this only for a visual confirmation that it started
+            vim.notify("lua_ls started for: " .. client.root_dir)
+            return true
+          end,
+        }
+      elseif server == 'astro' then
+        config = {
+          capabilities = capabilities,
+          filetypes = { 'astro' },
+          cmd = { "astro-ls", "--stdio" },
+          root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" }
+        }
+      elseif server == 'eslint' then
+        config = {
+          capabilities = capabilities,
+          cmd = { "vscode-eslint-language-server", "--stdio" },
+          filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+          root_markers = { 'package.json', '.eslintrc.js', 'eslint.config.js' },
+        }
+      elseif server == 'ast_grep' then
+        config = {
+          capabilities = capabilities,
+          filetypes = { 'javascript', 'typescript', 'rust', 'lua' },
+          root_markers = { 'sgconfig.yml' },
+          cmd = { "ast-grep", "lsp" },
+        }
+      end
+      vim.lsp.config(server, config);
+      vim.lsp.enable(server)
     end
 
     -- Enable all Mason-installed servers
