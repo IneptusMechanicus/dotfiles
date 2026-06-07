@@ -2,5 +2,6 @@
     Home,
     Downloads,
     Pictures,
-    Videos,
+    Path("/home/ineptus/invoices"),
+    Path("/home/ineptus/projects"),
 ]

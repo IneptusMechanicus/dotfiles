@@ -46,3 +46,13 @@ monitor_tag = "monitor0"
 [[profiles.ext1.conditions.required_monitors]]
 description = "BNQ BenQ EW2780 B6M0212501Q"
 monitor_tag = "monitor1"
+
+
+[profiles.Yoga]
+config_file = "/home/ineptus/.config/hyprdynamicmonitors/hyprconfigs/Yoga.go.tmpl"
+config_file_type = "template"
+[profiles.Yoga.conditions]
+
+[[profiles.Yoga.conditions.required_monitors]]
+description = "Samsung Display Corp. 0x4208"
+monitor_tag = "monitor0"
