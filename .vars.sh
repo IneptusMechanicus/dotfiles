@@ -1,4 +1,4 @@
-export TERM=xterm-256color
+export TERM=xterm-ghostty
 export EDITOR=nvim
 export VISUAL=nvim
 export CLICOLOR=1
