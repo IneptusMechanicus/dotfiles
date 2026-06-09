@@ -2,6 +2,6 @@
     Home,
     Downloads,
     Pictures,
-    Path("/home/ineptus/invoices"),
-    Path("/home/ineptus/projects"),
+    Path("/media/ineptus/Seagate Basic/DOCUMENTS/tmp-backup/invoices/"),
+    Path("/media/ineptus/Seagate Basic/DOCUMENTS/tmp-backup/projects/"),
 ]
