@@ -43,6 +43,8 @@ sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 9100 # Printer service
 
+sudo systemctl start NetworkManager.service
+
 # Setting up dotfiles and tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 rm ~/.bashrc
@@ -51,7 +53,7 @@ stow ~/dotfiles/
 chsh -s /usr/bin/zsh
 
 #Hyprland Plugins
-hyprom update
+hyprpm update
 hyprpm add https://github.com/shezdy/hyprsplit.git
 hyprpm enable hyprsplit
 hyprpm add https://github.com/horriblename/hyprgrass.git
