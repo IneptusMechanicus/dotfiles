@@ -22,16 +22,14 @@ sudo pacman -Sy     \
 	bluez           \
 	bluetui         \
 	ntfs-3g         \
-	cups            \
-	sane            \
-	ghostscript     \
-	gutenprint      \
-	ufw             \
-	networkmanager  \
-	cosmic-greeter  \
 	cosmic-files    \
 	cosmic-settings \
-	pavucontrol
+	wiremix         \
+	cmake           \
+	gcc             \
+	meson           \
+	ninja           \
+	glm             \
 
 #Firewall config
 sudo systemctl enable ufw.service
@@ -44,25 +42,19 @@ sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 9100 # Printer service
 
-sudo systemctl enable NetworkManager.service
-sudo systemctl start  NetworkManager.service
-
-#Printer server
-sudo systemctl enable cups.service
-sudo systemctl start  cups.service
-
-# Replacing SDDM with regreet
-sudo pacman -Ry sddm
-
-sudo systemctl enable cosmic-greeter.service
-sudo systemctl start  cosmic-greeter.service
-
 # Setting up dotfiles and tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 rm ~/.bashrc
 rm -rf ~/.config/hypr/
 stow ~/dotfiles/
 chsh -s /usr/bin/zsh
+
+#Hyprpm
+hyprom update
+hyprpm add https://github.com/shezdy/hyprsplit.git
+hyprpm enable hyprsplit
+hyprpm add https://github.com/horriblename/hyprgrass.git
+hyprpm enable hyprgrass
 
 # Setting up default flatpaks
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -78,7 +70,6 @@ net.lutris.Lutris           \
 org.blender.Blender         \
 org.inkscape.Inkscape       \
 org.kde.krita               \
-org.ardour.Ardour           \
 org.godotengine.Godot       \
 
 # Setting up AUR and AUR packages required in 

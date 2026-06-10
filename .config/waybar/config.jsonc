@@ -79,7 +79,7 @@
     "format-muted": "Muted 󰝟",
     "format-icons": ["󰕿", "󰖀", "󰕾"],
     "scroll-step": 5,
-    "on-click": "pavucontrol"
+    "on-click": "ghostty -e wiremix"
   },
   "backlight": {
     "device": "amdgpu_bl2",
