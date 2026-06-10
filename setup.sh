@@ -26,6 +26,7 @@ sudo pacman -Sy     \
 	cosmic-settings \
 	wiremix         \
 	cmake           \
+	cpio            \
 	gcc             \
 	meson           \
 	ninja           \
@@ -49,12 +50,19 @@ rm -rf ~/.config/hypr/
 stow ~/dotfiles/
 chsh -s /usr/bin/zsh
 
-#Hyprpm
+#Hyprland Plugins
 hyprom update
 hyprpm add https://github.com/shezdy/hyprsplit.git
 hyprpm enable hyprsplit
 hyprpm add https://github.com/horriblename/hyprgrass.git
 hyprpm enable hyprgrass
+
+git clone https://github.com/JeanSchoeller/iio-hyprland.git\ ~/.bins/iio-hyprland
+cd ~/.bins/iio-hyprland
+meson setup build --buildtype=release\
+ninja -C build
+sudo meson install -C build
+cd ~
 
 # Setting up default flatpaks
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -78,6 +86,7 @@ cd yay
 makepkg -si
 yay --version
 cd .. && rm -rf yay
+cd ~
 
 # AUR PAckages
 yay -S hyprdynamicmonitors-bin
